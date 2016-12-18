@@ -147,24 +147,24 @@
 			}
 
 			else {
-jQuery.ajax({
-	var c_name = $('#c_name').val();
-	var c_email = $('#c_email').val();
-	var c_message = $('#c_message ').val();
-	url: "../php/email-contato.php",
-  type: "POST",
-  data: {
-      nome: c_name,
-      tel: c_email,
-      messagem: c_message
-  },
-  success:function(msg){
-	response.html(msg).fadeIn(500);
-  }
-  error:function(msg){
-  	response.html(msg).fadeIn(500);
-  }
-});
+// jQuery.ajax({
+// 	var c_name = $('#c_name').val();
+// 	var c_email = $('#c_email').val();
+// 	var c_message = $('#c_message ').val();
+// 	url: "../php/email-contato.php",
+//   type: "POST",
+//   data: {
+//       nome: c_name,
+//       tel: c_email,
+//       messagem: c_message
+//   },
+//   success:function(msg){
+// 	response.html(msg).fadeIn(500);
+//   }
+//   error:function(msg){
+//   	response.html(msg).fadeIn(500);
+//   }
+// });
 			
 				}
             
