@@ -1,0 +1,146 @@
+/*================================================================ layout1 ===================================================================*/
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ffb586;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #ffb586 !important;
+    border-bottom: 2px solid #ffb586;
+}
+.site-title h3 {
+    color: #ffb586;
+}
+.home-text h2 {
+    color: #ffb586;
+}
+.carousel-indicators .active {
+    background-color: #ffb586;
+    border-color: #ffb586;
+}
+.home-text h2 {
+    color: #ffb586;
+}
+.button::before,
+.button::after {
+    background: #ffb586;
+}
+.button:hover {
+    border-color: #ffb586;
+}
+.creativity-grid {
+    background-color: #ffb586;
+}
+.appointment:hover{
+    color: #ffb586;
+}
+.about-details a {
+    background-color: #ffb586;
+    border: 1px solid #ffb586;
+}
+.about-details a:hover {
+    color: #ffb586;
+}
+.video-icon {
+    color: #ffb586;
+}
+.video-grid a:hover{
+    color: #ffb586;
+}
+.work-statistics {
+    background-color: #ffb586;
+}
+.speciality-details a {
+    background-color: #ffb586;
+    border: 1px solid #ffb586;
+}
+.speciality-details a:hover {
+    color: #ffb586;
+}
+#filters li span.active {
+    background: #ffb586;
+}
+.service-details {
+    background-color: #ffb586;
+}
+.team-details {
+    background-color: #ffb586;
+}
+.team-member:hover .team-img{
+    border: 5px solid #ffb586;
+}
+.nav-tabs > li > a {
+    background-color: #ffb586;
+}
+.price-pack-head h3 {
+    background-color: #ffb586;
+}
+.price-pack-body a:hover {
+    background-color: #ffb586;
+    border: 1px solid #ffb586;
+}
+.price-pack-body .middle{
+    background-color: #ffb586;
+    border: 1px solid #ffb586;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+    background-color: #ffb586;
+    border: none;
+}
+.fa-4x {
+    color: #ffb586;
+}
+#contact {
+    background-color: #ffb586;
+}
+.btn-success.disabled {
+    background-color: #ffb586;
+    border-color: #ffb586;
+}
+.btn.disabled:hover{
+    background-color: #ffb586;
+    border-color: #ffb586;
+}
+.btn-success:hover{
+    background-color: #ffb586;
+    border-color: #ffb586;
+}
+.btn-success {
+    background-color: #ffb586;
+    border-color: #ffb586;
+}
+.text-danger {
+    color: #ffb586;
+}
+.text-success {
+    color: #ffb586;
+}
+.contact-icon {
+    color: #ffb586;
+}
+.copyright-details{
+    background-color: #ffb586;
+}
+.overlay {
+    background-color: #ffb586;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color: #ffb586;
+}
+.nav-tabs > li > a {
+    border: 1px solid #ffb586;
+}
+.stat-icon {
+    background-color: #ffccac;
+}
+.work-statistics:hover .stat-icon{
+    color: #ffb586;
+}
+.service-icon {
+    background-color: #ffccac;
+}
+.service-details:hover .service-icon{
+    color: #ffb586;
+}
+.contact-content::after {
+    background-color: rgba(255, 178, 158, 0.8);
+}
