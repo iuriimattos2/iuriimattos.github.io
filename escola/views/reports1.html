@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="form-group">
+	                <h5>Relatório</h5>
+                    <div class="pull-right">
+                        <button ng-click="exportpdf()" style="margin-top: -7px;" class="btn btn-danger">Exportar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    <table id="report" class="table table-report">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Janeiro</th>
+                            <th>Fevereiro</th>
+                            <th>Março</th>
+                            <th>Abril</th>
+                            <th>Maio</th>
+                            <th>Junho</th>
+                            <th>Julho</th>
+                            <th>Agosto</th>
+                            <th>Setembro</th>
+                            <th>Outubro</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="report in reports">
+                            <th>{{report.classcode}}<br>Sala1</th>
+                            <td ng-repeat="month in monthly">
+                                <div ng-class="{'pdf-cell':haveLessons(month, report)}"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

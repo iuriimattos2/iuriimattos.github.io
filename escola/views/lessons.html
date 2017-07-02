@@ -1,0 +1,127 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Cadastro de aulas</h5>
+            </div>
+            <div class="ibox-content">
+                <form method="get" class="form-horizontal" ng-submit="generate()">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Data da primeira aula</label>
+                        <div class="col-sm-3">
+                            <input class="form-control datainicial" type="text" ng-model="startdate" required="required">
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                    jQuery(document).ready(function(){
+                        jQuery('.datainicial').datepicker({
+                            format: "dd/mm/yyyy",
+                            language: "en",
+                            orientation: "top left",
+                            autoclose: true,
+                            todayHighlight: true
+                        });
+                    });
+                    </script>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Total de aulas após a data da primeira aula</label>
+                        <div class="col-sm-3">
+                            <input class="form-control data" type="number" min="1" ng-model="lessonamount" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Dias da semana</label>
+                        <div class="col-sm-3">
+                             <select multiple class="form-control" ng-model="weekdays" required="required">
+                                <option value="sunday">Domingo</option>
+                                <option value="monday">Segunda</option>
+                                <option value="tuesday">Terça</option>
+                                <option value="wednesday">Quarta</option>
+                                <option value="thursday">Quinta</option>
+                                <option value="friday">Sexta</option>
+                                <option value="saturday">Sábado</option>
+                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Horário da aula</label>
+                        <div class="col-sm-3">
+                            <input type="time" ng-model="hour" pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Turma</label>
+                        <div class="col-sm-3">
+                        <select class="form-control" ng-model="classe" ng-change="getRooms()" ng-options="classe.code for classe in classes track by classe.id" required="required">
+                            <option></option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Sala</label>
+                        <div class="col-sm-3">
+                        <select class="form-control" ng-model="room" ng-change="getTeachers()" ng-options="room.name for room in rooms track by room.id" required="required">
+                            <option></option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Professor</label>
+                        <div class="col-sm-3">
+                        <select class="form-control" ng-model="teacher" ng-options="teacher.name for teacher in teachers track by teacher.id" required="required">
+                            <option></option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <button class="btn btn-primary" type="submit">GERAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Lista de aulas</h5>
+            </div>
+            <div class="ibox-content">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-md-2">ID</th>
+                            <th class="col-md-2">Data</th>
+                            <th class="col-md-2">Hora</th>
+                            <th class="col-md-2">Turma</th>
+                            <th class="col-md-2">Sala</th>
+                            <th class="col-md-2">Professor</th>
+                            <th class="col-md-1"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="lesson in lessons">
+                            <td>{{lesson.id}}</td>
+                            <td>{{lesson.date}}</td>
+                            <td>{{lesson.hour}}</td>
+                            <td>{{lesson.classe.code}}</td>
+                            <td>{{lesson.room.name}}</td>
+                            <td>{{lesson.teacher.name}}</td>
+                            <td>
+                             <button ng-click="remove(lesson.id)" class="btn btn-danger btn-xs" type="submit">deletar</button>
+                             <a class="btn btn-info btn-xs" href="#/lessons-form/{{lesson.id}}" type="submit">editar</a>
+                            </td>
+                        </tr>
+                        <tr ng-show="!lessons.length">
+                            <td colspan="7" class="text-center">Nenhuma aula encontrada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="form-group">
+	                <h5>Relatório</h5>
+                    <div class="pull-right">
+                        <button ng-click="exportpdf()" style="margin-top: -7px;" class="btn btn-danger">Exportar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <table id="report" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1">QtdTurmas</th>
+                            <th class="col-md-1">QtdAlunos</th>
+                            <th class="col-md-10">Nome Módulo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="reports in reports">
+                            <td>{{reports.classes}}</td>
+                            <td>{{reports.student}}</td>
+                            <td>{{reports.name}}</td>
+                        </tr>
+                        <tr ng-show="!reports.length">
+                            <td colspan="9" class="text-center">Nenhum turma encontrada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

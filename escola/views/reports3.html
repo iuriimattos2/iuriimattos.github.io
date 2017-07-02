@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="form-inline">
+                    <h5>Relatório</h5>
+                        <div class="col-sm-1">
+                            <select class="form-control" ng-model="classeName" ng-change="getLessons()" ng-options="allClasses.code for allClasses in allClasses track by allClasses.code" required="required" style="margin-top: -7px;">
+                            </select>
+                        </div>
+                    <div class="pull-right">
+                        <button ng-click="exportpdf()" style="margin-top: -7px;" class="btn btn-danger">Exportar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <table id="report" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1">Professor</th>
+                            <th class="col-md-1">Hora</th>
+                            <th class="col-md-1">Dias da semana</th>
+                            <th colspan="5" ng-repeat="month in monthHeader">{{ month }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in rows">
+                            <td>{{row.teacher}}</td>
+                            <td>{{row.hour}}</td>
+                            <td>{{row.weekday}}</td>
+                            <td ng-repeat="lesson in row.lessons track by $index">{{ lesson }}</td>
+                        </tr>
+                        <tr ng-show="!rows.length">
+                            <td colspan="7" class="text-center">Nenhum turma encontrada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

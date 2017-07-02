@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Editando turma</h5>
+            </div>
+            <div class="ibox-content">
+                <form method="get" class="form-horizontal" ng-submit="update()">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Curso</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" ng-change="getModules()" ng-model="course" ng-options="course.name for course in courses track by course.id" required="required">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Módulos</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" ng-model="module" ng-options="module.name for module in modules track by module.id" required="required">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Turno</label>
+                        <div class="col-sm-3">
+                        <select class="form-control" ng-model="turn" ng-change="setCode()" required="required">
+                            <option></option>
+                            <option value="Manhã">Manhã</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noite">Noite</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Código</label>
+                        <div class="col-sm-2">
+                            <input class="form-control" type="text" ng-model="code" required="required">
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label">Data inicio</label>
+                        <div class="col-sm-2">
+                            <input class="form-control data1" type="text" ng-model="startdate" required="required">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Data fim</label>
+                        <div class="col-sm-2">
+                            <input class="form-control data2" type="text" ng-model="enddate" required="required">
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                    jQuery(document).ready(function(){
+                        jQuery('.data1').datepicker({
+                            format: "dd/mm/yyyy",
+                            language: "en",
+                            orientation: "top left",
+                            autoclose: true,
+                            todayHighlight: true
+                        });
+                        jQuery('.data2').datepicker({
+                            format: "dd/mm/yyyy",
+                            language: "en",
+                            orientation: "top left",
+                            autoclose: true,
+                            todayHighlight: true
+                        });
+                    });
+                    </script>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Status</label>
+                        <div class="col-sm-3">
+                        <select class="form-control" ng-model="status" required="required">
+                            <option></option>
+                            <option value="Aberto">Aberto</option>
+                            <option value="Cursando">Cursando</option>
+                            <option value="Concluido">Concluido</option>
+                            <option value="Cancelado">Cancelado</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <button class="btn btn-primary" type="submit">Salvar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

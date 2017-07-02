@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+// require('nw.gui').Window.get().showDevTools()
+</script>
+<html ng-app="escola">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/plugins/datejs/datejs.js"></script>
+    <script type="text/javascript" src="assets/js/jsPDF/jspdf.js"></script>
+    <script type="text/javascript" src="assets/js/jsPDF/jspdf.plugin.addhtml.js"></script>
+    <script type="text/javascript" src="assets/js/jsPDF/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="assets/js/jsPDF/FileSaver.min.js"></script>
+    <script type="text/javascript" src="assets/js/jsPDF/html2canvas.js"></script>
+    <script type="text/javascript" src="assets/js/jsPDF/rasterizeHTML.allinone.js"></script>
+</head>
+<body class="skin-1" ng-controller="AppCtrl">
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <span>
+                            <img alt="image" class="img-circle" src="assets/img/profile_small.jpg" />
+                        </span>
+                        <a>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">Marcelo</strong>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="logo-element">
+                        <!-- IN+ -->
+                    </div>
+                </li>
+                <li ng-class="{ active: (menuActive == 'students') }">
+                    <a ui-sref="students">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span class="nav-label">Alunos</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'lessons') }">
+                    <a ui-sref="lessons">
+                        <i class="fa fa-comments-o"></i>
+                        <span class="nav-label">Aulas</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'courses') }">
+                    <a ui-sref="courses">
+                        <i class="fa fa-university"></i>
+                        <span class="nav-label">Cursos</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'disciplines') }">
+                    <a ui-sref="disciplines">
+                        <i class="fa fa-list"></i>
+                        <span class="nav-label">Disciplinas</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'holidays') }">
+                    <a ui-sref="holidays">
+                        <i class="fa fa-calendar"></i>
+                        <span class="nav-label">Feriados e Recessos</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'modules') }">
+                    <a ui-sref="modules">
+                        <i class="fa fa-book"></i>
+                        <span class="nav-label">Módulos</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'teachers') }">
+                    <a ui-sref="teachers">
+                        <i class="fa fa-male"></i>
+                        <span class="nav-label">Professores</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'reports1') }">
+                     <a ui-sref="reports1">
+                        <i class="fa fa-bar-chart"></i>
+                        <span class="nav-label">Relatório1</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'reports2') }">
+                     <a ui-sref="reports2">
+                        <i class="fa fa-bar-chart"></i>
+                        <span class="nav-label">Relatório2</span>
+                    </a>
+                </li>
+<!--                 <li ng-class="{ active: (menuActive == 'home') }">
+                    <a ui-sref="home">
+                        <i class="fa fa-th-large"></i>
+                            <span class="nav-label">Home</span>
+                        </span>
+                    </a>
+                </li> -->
+                <li ng-class="{ active: (menuActive == 'reports3') }">
+                     <a ui-sref="reports3">
+                        <i class="fa fa-bar-chart"></i>
+                        <span class="nav-label">Relatório3</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'rooms') }">
+                    <a ui-sref="rooms">
+                        <i class="fa fa-building-o"></i>
+                        <span class="nav-label">Salas</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'classes') }">
+                    <a ui-sref="classes">
+                        <i class="fa fa-users"></i>
+                        <span class="nav-label">Turmas</span>
+                    </a>
+                </li>
+                <li ng-class="{ active: (menuActive == 'reports2') }">
+                    <a ui-sref="classes">
+                        <i class="fa fa-database"></i>
+                        <span id="exportButton" class="nav-label">Banco de dados</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>{{sectionName}}</h2>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight" ui-view=""></div>
+    </div>
+</div>
+<!-- Pixel Admin's javascripts -->
+<script src="build/lib.js"></script>
+<script src="build/app.js"></script>
+</body>
+</html>
