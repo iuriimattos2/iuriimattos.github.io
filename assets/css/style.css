@@ -586,6 +586,10 @@ textarea.form-control {
  * Scroll to top
 /* ---------------------------------------------- */
 
+.fa {
+    margin-top: 10px;
+}
+
 .scroll-up {
     position: fixed;
     display: none;
@@ -603,6 +607,7 @@ textarea.form-control {
     color: #fff;
     font-size: 15px;
     line-height: 30px;
+    margin-bottom: 1px;
 }
 
 .scroll-up a:hover,
