@@ -70,11 +70,13 @@
             $('#salvar').click(function () {
                 var caderneta = [];
                 $("input").each(function() {
-                    if(this.classList[0] === 'alunos') {
-                        caderneta.push(this.value);
-                    }
-                    else if(this.classList[0] === 'faltas') {
-                        caderneta.push(this.value);
+                    if(this.value !== '') {
+                        if(this.classList[0] === 'alunos') {
+                            caderneta.push(this.value);
+                        }
+                        else if(this.classList[0] === 'faltas') {
+                            caderneta.push(this.value);
+                        }
                     }
                 });
                 firebase.database().ref('discipulado').set({
@@ -84,7 +86,13 @@
 
             });
             $('#adicionar').click(function () {
-                alert('Em construção');
+                $('tbody')
+                    .append(
+                        $(
+                            "<tr><td><input type='text' class='alunos' title='aluno' value=''/>"
+                            + "</td><td><input type='number' class='faltas' title='falta' value=''/></td></tr>"
+                        )
+                    );
             });
         }
 
