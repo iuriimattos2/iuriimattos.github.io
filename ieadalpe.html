@@ -17,57 +17,92 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>Aluno</td>
-      <td><input title="Faltas" type="number" class="inputNumberFaltas"></td>
-    </tr>
-    <tr>
-      <td>Aluno</td>
-      <td><input title="Faltas" type="number" class="inputNumberFaltas"></td>
-    </tr>
-    <tr>
-      <td>Aluno</td>
-      <td><input title="Faltas" type="number" class="inputNumberFaltas"></td>
-    </tr>
     </tbody>
   </table>
-  <button>Salvar</button>
+  <button id="salvar">Salvar</button>
+  <button id="adicionar">Adicionar</button>
 </div>
 
 </body>
 </html>
 
-
 <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAsC8X4k3xoEiBe97PefQQCzkNz7vjDr7w",
-        authDomain: "caderneta-ieadalpe.firebaseapp.com",
-        databaseURL: "https://caderneta-ieadalpe.firebaseio.com",
-        projectId: "caderneta-ieadalpe",
-        storageBucket: "",
-        messagingSenderId: "399480157781"
-    };
-    firebase.initializeApp(config);
-</script>
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script>
-  $(document).ready(function() {
-      var password = prompt('Insira sua senha sr(a) dirigente:');
+    (function($) {
 
-      if(password === 'Cristo') {
-          alert('Bem vindo(a)');
-          $('.container').show();
-      }
-      else {
-          $('.container').hide();
-          alert('Senha inválida');
-      }
+        function initFirebase() {
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAsC8X4k3xoEiBe97PefQQCzkNz7vjDr7w",
+                authDomain: "caderneta-ieadalpe.firebaseapp.com",
+                databaseURL: "https://caderneta-ieadalpe.firebaseio.com",
+                projectId: "caderneta-ieadalpe",
+                storageBucket: "",
+                messagingSenderId: "399480157781"
+            };
+            firebase.initializeApp(config);
+        }
 
-  });
+        function promptAuth() {
+            var password = prompt('Insira sua senha sr(a) dirigente:');
+            if(password === 'Cristo') {
+                alert('Bem vindo(a)');
+                $('.container').show();
+                getData();
+            }
+            else {
+                $('.container').hide();
+                alert('Senha inválida');
+            }
+        }
+
+        function setData() {
+            $('#salvar').click(function () {
+                var caderneta = [];
+                $("input").each(function() {
+                    if(this.classList[0] === 'alunos') {
+                        caderneta.push(this.value);
+                    }
+                    else if(this.classList[0] === 'faltas') {
+                        caderneta.push(this.value);
+                    }
+                });
+                firebase.database().ref('discipulado').set({
+                    caderneta: caderneta
+                });
+                alert('salvo');
+
+            });
+            $('#adicionar').click(function () {
+                alert('Em construção');
+            });
+        }
+
+        function getData() {
+            var tbodyContent;
+            var tbody = $('tbody');
+            firebase.database().ref('discipulado').once('value').then(function(result) {
+
+                var caderneta = result.val().caderneta;
+                $.each( caderneta, function( index, value ){
+                    if(index % 2 === 0) {
+                        tbodyContent += "<tr><td><input type='text' class='alunos' title='aluno' value='" + value + "'/>";
+                    } else {
+                        tbodyContent += "</td><td><input type='number' class='faltas' title='falta' value='" + value + "'/></td></tr>";
+                    }
+                });
+                if ($('input')[0] === undefined) $('tbody').append(tbodyContent);
+            });
+        }
+
+        initFirebase();
+        promptAuth();
+        setData();
+        getData();
+
+    })(jQuery);
 </script>
