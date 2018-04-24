@@ -1,0 +1,10 @@
+@media (min-width:320px)  {
+    .img-responsive {
+        margin-top: 68px;
+    }
+}
+@media (min-width:1281px) {
+    .img-responsive {
+        margin-top: 25px;
+    }
+}
