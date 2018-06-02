@@ -1,22 +1,22 @@
 (function($) {
 
     function initFacebookGraph() {
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId            : '1899663293390603',
-                autoLogAppEvents : true,
-                xfbml            : true,
-                version          : 'v3.0'
-            });
-        };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        // window.fbAsyncInit = function() {
+        //     FB.init({
+        //         appId            : '1899663293390603',
+        //         autoLogAppEvents : true,
+        //         xfbml            : true,
+        //         version          : 'v3.0'
+        //     });
+        // };
+        //
+        // (function(d, s, id){
+        //     var js, fjs = d.getElementsByTagName(s)[0];
+        //     if (d.getElementById(id)) {return;}
+        //     js = d.createElement(s); js.id = id;
+        //     js.src = "https://connect.facebook.net/en_US/sdk.js";
+        //     fjs.parentNode.insertBefore(js, fjs);
+        // }(document, 'script', 'facebook-jssdk'));
     }
 
     function promptAuth() {
@@ -35,7 +35,7 @@
     }
 
     function postar() {
-        $('#postMensage').click(function() {
+        $('#postMessage').click(function() {
 
             // FB.login(function(response) {
             //     if (response.authResponse) {
@@ -49,23 +49,18 @@
             // });
 
             var message = $('#c_message').val();
-            var picture = 'http://l.yimg.com/f/i/tw/ks/show/120604_mntl01.jpg';
-            var link = 'https://www.youtube.com/watch?v=BIl8Px1ds3c';
-            var name = 'great';
-            var description = 'des';
 
+            if (message === '') return;
 
-            FB.api('/380087835831757/feed', 'post', {message: message, picture: picture, name: name, description: description },function (response){
+            var access_token = 'EAACEdEose0cBABGmfPS1eIjbG3IGYJjKk4rbNSU5CDYjugJIEl0yU16uL4pWFjoByiKpqhbxUK2uETae6q0fZBcY0ZB3WlkZCNoOGbFPNZAr4tfEH19ACctHFsj7ixQc7WR5k912HaRQXsdAevpuiZA49yUK3rNGZA0C931e4sYfSyRKQtOXWPCHhvfHs4sgljNbKym4H9RAZDZD';
+
+            FB.api('/1899663293390603/feed', 'post', {message: message, access_token: access_token},function (response){
                 if (!response || response.error) {
                     alert('Error occured');
                 } else {
                     alert('Post ID: ' + response.id);
                 }
             });
-
-            debugger;
-            var a = 1;
-            a = 2;
         });
     }
 

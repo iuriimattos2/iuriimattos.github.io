@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="www.iurimatos.com.br">
     <!--<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">-->
-    <title>CARTAS DO (PARA O) ALTISSIMO</title>
+    <title>CARTAS DO ALTISSIMO</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/modern-business.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://iurimatos.com.br/cartas-para-o-altissimo/">Cartas Do (Para O)
+            <a class="navbar-brand" href="http://iurimatos.com.br/cartas-do-altissimo/">Cartas Do (Para O)
                 Altissimo</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -41,7 +41,7 @@
                 <li>
                     <a
                             id="welcomeADM"
-                            href="#">
+                            href="#welcomeADM">
                         Administrador
                     </a>
                 </li>
@@ -50,7 +50,7 @@
     </div><!--/.container-fluid -->
 </nav>
 <div class="container">
-    <div role="main" class="col-md-8 col-md-push-4">
+    <div role="main" class="col-md-12">
         <div id="welcome" class="jumbotron">
             <h1 class="display-3">BEM VINDO AO NOSSO SITE</h1>
             <p class="lead">Breve adicionaremos algum conteúdo</p>
@@ -60,9 +60,29 @@
             </p>
         </div>
     </div>
-    <aside id="welcomeAside" role="complementary" class="col-md-4 col-md-pull-8">
-        <div class="fb-page" data-href="https://www.facebook.com/cartasparaoaltissimo" data-tabs="timeline" data-width="320" data-height="960" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/cartasparaoaltissimo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cartasparaoaltissimo">Cartas Do Altissimo</a></blockquote></div>
-    </aside>
+    <center id="welcomeAside" role="complementary" class="col-md-12">
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0&appId=380087835831757&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div
+                class="fb-page"
+                data-href="https://www.facebook.com/cartasdoaltissimo"
+                data-tabs="timeline"
+                data-small-header="false"
+                data-adapt-container-width="false"
+                data-width="320"
+                data-height="480"
+                data-hide-cover="false"
+                data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/cartasdoaltissimo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cartasparaoaltissimo">Cartas Do Altissimo</a></blockquote></div>
+    </center>
 </div>
 
 <!-- Modal -->
@@ -91,7 +111,7 @@
                                         <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Mensagem"></textarea>
                                     </div>
 
-                                    <button id="postMensage" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Enviar</button>
+                                    <button id="postMessage" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Enviar</button>
                                 </div>
                                 <div class="ajax-response"></div>
                             </form>
@@ -127,12 +147,3 @@
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/main.js"></script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0&appId=380087835831757&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
