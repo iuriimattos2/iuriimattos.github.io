@@ -8,3 +8,11 @@
         margin-top: 25px;
     }
 }
+
+#welcome {
+    background-color: white;
+}
+
+#welcomeAside {
+    align-items: center;
+}
