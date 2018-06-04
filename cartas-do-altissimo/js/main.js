@@ -1,7 +1,8 @@
 (function($) {
 
-    var access_token = '';
-    var message = '';
+    var pageId;
+    var access_token;
+    var message;
 
     function initFacebookGraph() {
         window.fbAsyncInit = function() {
@@ -28,18 +29,10 @@
             if(password === '') {
                 alert('Bem vindo(a)');
                 $('#myModal').modal('show');
-
-                FB.login(function(response)
-                {
-                    if (response.authResponse)
-                    {
-                        access_token = response.authResponse.accessToken;
-                    }
-                });
+                facebookAuth();
 
             }
             else {
-                $('#myModal').modal('hide');
                 alert('Senha inválida');
                 return;
             }
@@ -47,21 +40,58 @@
         });
     }
 
-    function postar() {
-        $('#postMessage').click(function() {
+    function facebookAuth() {
+        FB.login(function(response)
+        {
+            if (response.authResponse)
+            {
+                access_token = response.authResponse.accessToken;
+                FB.api(
+                    "/debug_token?input_token=" + access_token,
+                    function (response) {
+                        if (response && !response.error) {
+                            if (response.data.is_valid) {
 
+                                FB.api(response.data.user_id + '/accounts',function (response){
+                                    if (response) {
+
+                                        response.data.forEach(function (page) {
+
+                                            if (page.name === 'Cartas Do Altissimo') {
+
+                                                access_token = page.access_token;
+                                                pageId = page.id;
+
+                                            }
+
+                                        });
+
+
+                                    }
+                                });
+                            }
+                        }
+                    }
+                );
+            }
+        });
+    }
+
+    function postar() {
+
+        $('#postMessage').click(function() {
             message = $('#c_message').val();
 
-            if (message === '') return;
-            if (access_token === '') return;
 
-            FB.api('/1899663293390603/feed', 'post', {message: message, access_token: access_token},function (response){
-                if (!response || response.error) {
-                    alert('ocorreu um erro!');
-                } else {
-                    alert('sucesso!');
+            FB.api(
+                '/'+pageId+'/feed',
+                'POST',
+                {"message":message,"access_token":access_token},
+                function(response) {
+
                 }
-            });
+            );
+
         });
     }
 
