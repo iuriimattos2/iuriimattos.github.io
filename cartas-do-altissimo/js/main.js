@@ -1,5 +1,8 @@
 (function($) {
 
+    // https://developers.facebook.com/apps/380087835831757/review-status/
+    // Acessar o endereço web https://iurimatos.com.br/cartas-do-altissimo clicar em Administrador (mobile: botao menu depois Administrador) preencher o confirm com vazio (string vazia) logar no facebook, Preencher o campo "Mensagem" e clicar em Enviar
+
     var pageId;
     var access_token;
     var message;
