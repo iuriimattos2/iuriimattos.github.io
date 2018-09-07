@@ -170,6 +170,9 @@
           },
           error: function(msg) {
             response.html(msg).fadeIn(500);
+          },
+          always: function() {
+              document.querySelector('#contatoSubmit').remove();
           }
         });
       }
