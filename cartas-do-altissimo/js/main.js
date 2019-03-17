@@ -108,16 +108,6 @@
         });
     }
 
-    function affixHeader() {
-        $('#topnavbar').affix({
-            offset: {
-                top: $('#banner').height()
-            }
-        });
-    }
-
-
-    affixHeader();
     post();
     promptAuth();
     initFacebookGraph();
