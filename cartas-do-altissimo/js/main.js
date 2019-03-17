@@ -109,6 +109,4 @@
         });
     }
 
-    initFacebookGraph();
-
 })(jQuery);
