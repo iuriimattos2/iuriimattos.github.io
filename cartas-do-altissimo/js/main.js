@@ -30,10 +30,27 @@
     }
 
     document.onreadystatechange = function () {
-        if (document.readyState == "interactive") {
-            if (location.protocol != 'https:') {
+        var documentReadyState = document.readyState;
+        if (documentReadyState === "interactive") {
+            if (location.protocol !== 'https:') {
                 location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
             }
+        } else if(documentReadyState === "complete") {
+            FB.api('/my userid or pageid/feed?access_token=the acces token that I get from the Graph API Explorer', {limit:5} , function(response){
+                if (response && response.data && response.data.length){
+                    alert(response.message);
+                    var ul = document.getElementById('feed');
+                    for (var j=0; j<response.data.length; j++){
+                        var feed = response.data[j],
+                            li = document.createElement('li'),
+                            a = document.createElement('a');
+                        a.innerHTML = feed.message;
+                        a.href = feed.link;
+                        li.appendChild(a);
+                        ul.appendChild(li);
+                    }
+                }
+            });
         }
     }
 
@@ -47,7 +64,6 @@
 
             } else {
                 alert('Senha inválida');
-                return;
             }
 
         });
@@ -108,7 +124,6 @@
         });
     }
 
-    post();
     promptAuth();
     initFacebookGraph();
 
