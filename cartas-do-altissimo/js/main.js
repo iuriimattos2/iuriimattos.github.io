@@ -54,21 +54,6 @@
         }
     }
 
-    function promptAuth() {
-        $('#welcomeADM').click(function () {
-            var password = prompt('Insira sua senha administrador(a) :');
-            if (password === '') {
-                alert('Bem vindo(a)');
-                $('#myModal').modal('show');
-                facebookAuth();
-
-            } else {
-                alert('Senha inválida');
-            }
-
-        });
-    }
-
     function facebookAuth() {
         FB.login(function (response) {
             if (response.authResponse) {
@@ -124,7 +109,6 @@
         });
     }
 
-    promptAuth();
     initFacebookGraph();
 
 })(jQuery);
