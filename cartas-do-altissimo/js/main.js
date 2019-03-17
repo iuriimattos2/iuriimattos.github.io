@@ -88,7 +88,7 @@
         });
     }
 
-    function postar() {
+    function post() {
 
         $('#postMessage').click(function () {
             message = $('#c_message').val();
@@ -108,8 +108,18 @@
         });
     }
 
-    initFacebookGraph();
+    function affixHeader() {
+        $('#topnavbar').affix({
+            offset: {
+                top: $('#banner').height()
+            }
+        });
+    }
+
+
+    affixHeader();
+    post();
     promptAuth();
-    postar();
+    initFacebookGraph();
 
 })(jQuery);

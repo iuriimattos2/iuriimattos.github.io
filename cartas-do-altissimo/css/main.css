@@ -1,3 +1,17 @@
+/*header*/
+
+#topnavbar {
+    margin: 0;
+}
+#topnavbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/*main content*/
+
 @media (min-width:320px)  {
     .img-responsive {
         margin-top: 68px;
