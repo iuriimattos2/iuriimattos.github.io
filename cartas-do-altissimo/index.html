@@ -41,32 +41,9 @@
                     <a
                             id="welcomeADM"
                             href="#welcomeADM">
-                        <script>
-                            var finished_rendering = function () {
-                                console.log("finished rendering plugins");
-                                var spinner = document.getElementById("spinner");
-                                spinner.removeAttribute("style");
-                                spinner.removeChild(spinner.childNodes[0]);
-                            }
-                            FB.Event.subscribe('xfbml.render', finished_rendering);
-                        </script>
-                        <div id="spinner"
-                             style="
-        background: #4267b2;
-        border-radius: 5px;
-        color: white;
-        height: 40px;
-        text-align: center;
-        width: 250px;">
-                            Loading
-                            <div
-                                    class="fb-login-button"
-                                    data-max-rows="1"
-                                    data-size="large"
-                                    data-button-type="continue_with"
-                                    data-use-continue-as="true"
-                            ></div>
-                        </div>
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=380087835831757&autoLogAppEvents=1"></script>
+                        <div class="fb-login-button" data-width="116" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="true"></div>
                     </a>
                 </li>
             </ul>
@@ -109,25 +86,20 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                               aria-expanded="true" aria-controls="collapseOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Postar uma mensagem
                             </a>
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                         aria-labelledby="headingOne">
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                             <form id="contact-form" role="form">
                                 <div class="ajax-hidden">
                                     <div class="form-group wow fadeInUp" data-wow-delay=".3s">
-                                        <textarea class="form-control" id="c_message" name="c_message" rows="7"
-                                                  placeholder="Mensagem"></textarea>
+                                        <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Mensagem"></textarea>
                                     </div>
 
-                                    <button id="postMessage" class="btn btn-lg btn-block wow fadeInUp"
-                                            data-wow-delay=".3s">Enviar
-                                    </button>
+                                    <button id="postMessage" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Enviar</button>
                                 </div>
                                 <div class="ajax-response"></div>
                             </form>
@@ -137,8 +109,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
-                            <a class="collapsed disabled" role="button" data-toggle="collapse" data-parent="#accordion"
-                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <a class="collapsed disabled" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Em construção
                             </a>
                         </h4>
@@ -147,8 +118,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingThree">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Em construção
                             </a>
                         </h4>
