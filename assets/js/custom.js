@@ -138,6 +138,7 @@
         /* ---------------------------------------------- */
 
     $('#contact-form').submit(function(e) {
+      alert("Problema técnico encontrado, por favor, entre em contato via whatsapp (icone no canto inferior direito)");
       e.preventDefault();
       var c_name = $('#c_name').val();
       var c_email = $('#c_email').val();
