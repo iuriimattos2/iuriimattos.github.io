@@ -29,7 +29,7 @@
         }(document, 'script', 'facebook-jssdk'));
     }
 
-    function statusChangeCallback(response {
+    function statusChangeCallback(response) {
         debugger;
     }
 
