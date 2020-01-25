@@ -1,138 +1,551 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html lang="pt">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="www.iurimatos.com.br">
-    <!--<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">-->
-    <title>CARTAS DO ALTISSIMO</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/modern-business.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-<!--navbar fixed-->
-<nav id="topnavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Alternar de navegação</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://iurimatos.com.br/cartas-do-altissimo/">CARTAS DO ALTISSIMO</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a
-                            id="welcomeADM"
-                            href="#welcomeADM">
-                        <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3&appId=380087835831757&autoLogAppEvents=1"></script>
-                        <div class="fb-login-button" data-width="116" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="true"></div>
-                    </a>
-                </li>
-            </ul>
-        </div><!--/.nav-collapse -->
-        <!--header-->
-        <!--header-->
-    </div><!--/.container-fluid -->
-</nav>
-<!--navbar fixed-->
-
-<header id="banner">
-</header>
-
-<!--main content-->
-<div class="container">
-    <div role="main" class="col-md-12">
-        <div id="welcome" class="jumbotron">
-            <h1 class="display-3">BEM VINDO AO NOSSO SITE</h1>
-            <p class="lead">Breve adicionaremos algum conteúdo</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="https://fb.me/cartasdoaltissimo" role="button">PÁGINA DO
-                    FACEBOOK</a>
-            </p>
-        </div>
-    </div>
-</div>
-<!--main content-->
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Área do administrador</h4>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="p:domain_verify" content="45de0ed349884c8792f86d53620e4e3b" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Iuri Matos</title>
+      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+      <link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+      <link href="assets/css/animate.css" rel="stylesheet">
+      <link href="assets/css/style.css" rel="stylesheet" media="screen">
+      <script src="assets/js/modernizr.custom.js"></script>
+   </head>
+   <body>
+      <div id="preloader">
+         <div id="status"></div>
+      </div>
+      <section id="home" class="pfblock-image screen-height">
+         <div class="home-overlay"></div>
+         <div class="intro">
+            <h2 class="start">Olá, meu nome é Iuri Matos sou</h2>
+            <h1>Analista de Sistemas</h1>
+            <div class="start">trabalho criando apps, sites e sistemas (CMS/CRM/ERP)</div>
+            <figure style="display: none">
+               <img src="assets/images/cover.jpg">
+            </figure>
+         </div>
+         <a href="#services">
+            <div class="scroll-down">
+               <span>
+               <i class="fa fa-angle-down fa-2x"></i>
+               </span>
             </div>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Postar uma mensagem
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <form id="contact-form" role="form">
-                                <div class="ajax-hidden">
-                                    <div class="form-group wow fadeInUp" data-wow-delay=".3s">
-                                        <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Mensagem"></textarea>
-                                    </div>
-
-                                    <button id="postMessage" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Enviar</button>
-                                </div>
-                                <div class="ajax-response"></div>
-                            </form>
+         </a>
+      </section>
+      <!-- Home end -->
+      <!-- Navigation start -->
+      <header class="header">
+         <nav class="navbar navbar-custom" role="navigation">
+            <div class="container">
+               <div class="navbar-header">
+                  <!-- 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                     <span class="sr-only"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button> -->
+                  <a class="navbar-brand" href="index.html">Iuri Matos</a>
+               </div>
+               <div class="collapse navbar-collapse" id="custom-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                     <li><a href="#home">Inicio</a></li>
+                     <li><a href="#services">Serviços</a></li>
+                     <li><a href="#portfolio">Sobre meus trabalhos</a></li>
+                     <li><a href="#skills">Meus trabalhos</a></li>
+                     <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+                     <li><a href="#contact">Contato</a></li>
+                  </ul>
+               </div>
+            </div>
+            <!-- .container -->
+         </nav>
+      </header>
+      <!-- Navigation end -->
+      <!-- Services start -->
+      <section id="services" class="pfblock pfblock-gray">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                  <div class="pfblock-header wow fadeInUp">
+                     <h2 class="pfblock-title">SERVIÇOS</h2>
+                     <div class="pfblock-line"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-4">
+                  <div class="iconbox wow slideInLeft">
+                     <div class="iconbox-icon">
+                        <span class="icon-screen-smartphone"></span>
+                     </div>
+                     <div class="iconbox-text">
+                        <h3 class="iconbox-title">Design Responsivo</h3>
+                        <div class="iconbox-desc">
+                           Sites, sistemas e aplicativos ajustaveis em qualquer dispositivo (PC, smartphone, tablet e etc)
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a class="collapsed disabled" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Em construção
-                            </a>
-                        </h4>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Em construção
-                            </a>
-                        </h4>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="iconbox wow slideInLeft">
+                     <div class="iconbox-icon">
+                        <span class="icon-lock-open"></span>
+                     </div>
+                     <div class="iconbox-text">
+                        <h3 class="iconbox-title">Tecnologias Open Source</h3>
+                        <div class="iconbox-desc">
+                           Acelere processos, expanda sua comunicação, integre gráficos e percentuais sem prestar conta a ninguém.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="iconbox wow slideInRight">
+                     <div class="iconbox-icon">
+                        <span class="icon-bulb"></span>
+                     </div>
+                     <div class="iconbox-text">
+                        <h3 class="iconbox-title">Automatize Seus Processos</h3>
+                        <div class="iconbox-desc">
+                           Descubra como a tecnolgia pode aumentar perfomance dos seus processos.
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
-
-</body>
+            <!-- .row -->
+         </div>
+         <!-- .container -->
+      </section>
+      <!-- Services end -->
+      <!-- Portfolio start -->
+      <section id="portfolio" class="pfblock">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                  <div class="pfblock-header wow fadeInUp">
+                     <h2 class="pfblock-title">Sobre meus trabalhos</h2>
+                     <div class="pfblock-line"></div>
+                     <div class="pfblock-subtitle">
+                        <p>Sites</p>
+                        <p>Atuei em agências de publicidade e como terceirizado usando <a href="https://br.wordpress.org/"><b>WORDPRESS</b></a> a maior plataforma de gerenciamento de conteúdo
+                           (CMS)
+                           com quase 31% da internet. É possível desenvolver blogs, <b>eCommerces</b>, sites, portais e etc.
+                        </p>
+                        <br>
+                        <p>Sistemas</p>
+                        <p>Uso <a href="https://php.net/"><b>PHP</b></a> uma linguagem de programação bastante usada e que atende a maioria das necessidades é possível construir <b>aplicações,
+                           serviços e sistemas</b>. Esta ferramenta é muito utilizada em pequenas, médias e grandes empresas.
+                        </p>
+                        <br>
+                        <p>APPs</p>
+                        <p>Uso <a href="https://ionicframework.com/"><b>IONIC</b></a> para construir páginas web dentro de apps,
+                           transformando um site em APP, trabalho com Android 5.0+ e iOS 9.0+
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- .row -->
+         </div>
+         <!-- .contaier -->
+      </section>
+      <!-- Portfolio end -->
+      <!-- Skills start -->
+      <section class="pfblock pfblock-gray" id="skills">
+         <div class="container">
+            <div class="row skills">
+               <!--Sites-->
+               <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                     <div class="pfblock-header wow fadeInUp">
+                        <h2 class="pfblock-title">Meus trabalhos</h2>
+                        <div class="pfblock-line"></div>
+                        <div class="pfblock-subtitle">
+                           Sites
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/108.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Bringlead</h2>
+                              <a href="http://bringlead.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/109.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Livraria Módulo</h2>
+                              <a href="http://www.livrariamodulo.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/107.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Jaula Cursos</h2>
+                              <a href="http://www.jaula.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/102.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Blog de João Paulo</h2>
+                              <a href="http://blogdojp.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/villagarden.png">
+                           <figcaption>
+                              <h2>Villa Garden</h2>
+                              <a href="http://vgarden.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/rederenoveja.png">
+                           <figcaption>
+                              <h2>Rede Renove Já</h2>
+                              <a href="http://rederenoveja.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/comoregistrar.png" alt="img01" />
+                           <figcaption>
+                              <h2>Como Registrar</h2>
+                              <a href="http://comoregistrar.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/donavalmira.png" alt="img01" />
+                           <figcaption>
+                              <h2>Dona Valmira</h2>
+                              <a href="http://www.donavalmira.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/guiadosestados.png" alt="img01" />
+                           <figcaption>
+                              <h2>Grandes Marcas PE</h2>
+                              <a href="https://www.grandesmarcaspe.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/ifp.png" alt="img01" />
+                           <figcaption>
+                              <h2>Incorporadora Ferreira Filho</h2>
+                              <a href="http://ifp.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/cfi.png" alt="Colégio CFI" />
+                           <figcaption>
+                              <h2>Colégio CFI</h2>
+                              <a href="https://www.colegiocfi.com.br/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <!--Sistemas-->
+               <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                     <div class="pfblock-header wow fadeInUp">
+                        <div class="pfblock-line"></div>
+                        <div class="pfblock-subtitle">
+                           Sistemas
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/110.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Sistema de autenticação <br> Portal do Cabos da F.A.R</h2>
+                              <a href="http://www.militarpos64.com.br/sitev2/" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/103.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Gestão Escolar</h2>
+                              <a href="/escola" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/105.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Gestão de Restaurante</h2>
+                              <p>Cardapio disponivel em versão mobile ou web</p>
+                              <a href="/meugarcon/admin" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <!--Apps-->
+               <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                     <div class="pfblock-header wow fadeInUp">
+                        <div class="pfblock-line"></div>
+                        <div class="pfblock-subtitle">
+                           Aplicativos
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/104.jpg" alt="img01" />
+                           <figcaption>
+                              <h2>Cardápio para Restaurantes</h2>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                           <img src="assets/images/crud-com-bootstrap.png" alt="CRUD COM bootstrap	" />
+                           <figcaption>
+                              <h2>CRUD.exe</h2>
+                              <a href="https://github.com/iurimattos/nwjs-compiled-sample/releases/download/1.0.0/win64.rar" target="_blank"></a>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  <!-- <div class="col-xs-12 col-sm-4 col-md-4">
+                     <div class="grid wow zoomIn">
+                     	<figure class="effect-bubba">
+                     		<img src="assets/images/104.jpg" alt="img01" />
+                     		<figcaption>
+                     			<h2>Cardápio para Restaurantes</h2>
+                     		</figcaption>
+                     	</figure>
+                     </div>
+                     
+                     </div> -->
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Skills end -->
+      <!-- CallToAction start -->
+      <section class="calltoaction">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-lg-12">
+                  <h2 class="wow slideInRight" data-wow-delay=".1s">VOCÊ ESTA PRONTO PARA COMEÇAR?</h2>
+                  <div class="calltoaction-decription wow slideInRight" data-wow-delay=".2s">
+                     Estou disponivel para projetos como freelance
+                  </div>
+               </div>
+               <div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
+                  <a href="#contact" class="btn btn-lg">Contate-me</a>
+               </div>
+            </div>
+            <!-- .row -->
+         </div>
+         <!-- .container -->
+      </section>
+      <!-- CallToAction end -->
+      <!-- Contact start -->
+      <section id="contact" class="pfblock">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                  <div class="pfblock-header">
+                     <h2 class="pfblock-title">CONTATO</h2>
+                     <div class="pfblock-line"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- .row -->
+            <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                  <style>
+                     div.gallery {
+                     margin: 5px;
+                     border: 1px solid #ccc;
+                     float: left;
+                     width: 180px;
+                     }
+                     div.gallery:hover {
+                     border: 1px solid #777;
+                     }
+                     div.gallery img {
+                     width: 100%;
+                     height: auto;
+                     }
+                     div.desc {
+                     padding: 15px;
+                     text-align: center;
+                     }
+                  </style>                  
+                  
+                  <div class="gallery">h
+                     <a href="https://api.whatsapp.com/send?phone=5581996535215" target="_blank">	  
+                     <img src="https://img.icons8.com/officel/16/000000/whatsapp.png" alt="Cinque Terre" height="400">
+                     </a>
+                     <div class="desc"</div>
+                  </div>
+                  <div class="gallery">
+                     <a href= "https://www.facebook.com/iurimattos" target="_blank"></a>
+                     <img src="<img src="https://img.icons8.com/cute-clipart/64/000000/facebook-new.png">" alt="" height="400">
+                     </a>
+                     <div class="desc">Add a description of the image here</div>
+                  </div>
+                  <div class="gallery">                     
+                     <a href= "https://www.instagram.com/iuriimattos/" target="_blank">
+                     <img src="<img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png">" alt="" height="400">
+                     </a>
+                     <div class="desc">Add a description of the image here</div>
+                  </div>
+                  <div class="gallery">                     
+                     <a href="https://www.linkedin.com/in/iurimatos/" target="_blank" href="<img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png">">
+                     <img src="<img src="https://img.icons8.com/cute-clipart/64/000000/instagram-new.png">" alt=" " height="400">
+                     </a>
+                     <div class="desc">Add a description of the image here</div>
+                  </div>
+                  <form id="contact-form" role="form">
+                     <div class="ajax-hidden">
+                        <div class="form-group wow fadeInUp">
+                           <label class="sr-only" for="c_name">Nome</label>
+                           <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Nome">
+                        </div>
+                        <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+                           <label class="sr-only" for="c_email">Email</label>
+                           <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+                        </div>
+                        <div class="form-group wow fadeInUp" data-wow-delay=".2s">
+                           <label class="sr-only" for="c_email">Telefone</label>
+                           <input type="tel" id="c_phone" class="form-control" name="c_phone" placeholder="Telefone">
+                        </div>
+                        <div class="form-group wow fadeInUp" data-wow-delay=".3s">
+                           <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Mensagem"></textarea>
+                        </div>
+                        <button id="contatoSubmit" type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Mensagem</button>
+                     </div>
+                     <div class="ajax-response"></div>
+                  </form>
+               </div>
+            </div>
+            <!-- .row -->
+         </div>
+         <!-- .container -->
+      </section>
+      <!-- Contact end -->
+      <!-- Footer start -->
+      <!--<footer id="footer">-->
+      <!--<div class="container">-->
+      <!--<div class="row">-->
+      <!--<div class="col-sm-12">-->
+      <!--<ul class="social-links">-->
+      <!--<li><a href="https://www.facebook.com/iurimattos" target="_blank" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>-->
+      <!--<li><a href="skype://iurimattos" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-skype"></i></a></li>-->
+      <!--</ul>-->
+      <!--&lt;!&ndash; 					<p class="heart">-->
+      <!--Made with <span class="fa fa-heart fa-2x animated pulse"></span> in Nottingham-->
+      <!--</p>-->
+      <!--<p class="copyright">-->
+      <!--© 2015 Iuri Matos | Images: <a href="https://unsplash.com/">Unsplash</a> & <a href="http://zoomwalls.com/">Zoomwalls</a>-->
+      <!--</p> &ndash;&gt;-->
+      <!--</div>-->
+      <!--</div>&lt;!&ndash; .row &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; .container &ndash;&gt;-->
+      <!--</footer>-->
+      <!-- Footer end -->
+      <!-- Scroll to top -->
+      <div class="scroll-up">
+         <a href="#home"><i class="fa fa-angle-up"></i></a>
+         <a href="https://www.linkedin.com/in/iurimatos/"><i class="fa fa-linkedin"></i></a>
+         <a href="https://www.facebook.com/iurimattos"><i class="fa fa-facebook"></i></a>
+         <!--<a href="http://m.me/iurimattos"><i class="fa fa-facebook"></i></a>-->		
+         <a href="https://api.whatsapp.com/send?phone=5581996535215"><i class="fa fa-whatsapp"></i></a>
+      </div>
+      <!-- Scroll to top end-->
+      <!-- Javascript files -->
+      <script src="assets/js/jquery-1.11.1.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/compressed.js"></script>
+      <!-- <script src="assets/js/jquery.parallax-1.1.3.js"></script> -->
+      <!-- <script src="assets/js/imagesloaded.pkgd.js"></script> -->
+      <!-- <script src="assets/js/jquery.sticky.js"></script> -->
+      <!-- <script src="assets/js/smoothscroll.js"></script> -->
+      <script src="assets/js/wow.min.js"></script>
+      <!-- <script src="assets/js/jquery.easypiechart.js"></script> -->
+      <script src="assets/js/waypoints.min.js"></script>
+      <!-- <script src="assets/js/jquery.cbpQTRotator.js"></script> -->
+      <script src="assets/js/custom.js"></script>
+      <!-- Minifyer Javascript files by https://jscompress.com/ -->
+      <!-- <script src="assets/js/compressed.js"></script> -->
+      <!-- Minifyer Javascript files by https://jscompress.com/-->
+      <a href="https://icons8.com/icon/d5ntEsf0JRhM/whatsapp">icons by Icons8</a>
+   </body>
 </html>
-
-<script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/main.js"></script>
