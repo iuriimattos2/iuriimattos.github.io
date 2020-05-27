@@ -1,2 +1,5 @@
 .idea/*
 .vscode/*
+**/.vscode/**
+**/.idea/**
+cartas-do-altissimo/.vscode/settings.json
