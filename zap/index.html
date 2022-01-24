@@ -18,8 +18,60 @@
    </head>
    <body>
       <!-- Add your site or application content here -->  
-      <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField"/>
-      <button class="search">DDDNUMERO</button>
+<style>
+body {
+  margin: 0;
+  color: #25d366;
+}
+
+.flexbox-container {
+  background: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 0;
+  min-height: 24em;
+  
+}
+
+.flexbox-item {
+  max-width: 50%;
+  background: gray;
+
+}
+
+.fixed {
+  flex: none;
+  max-width: 50%;
+}
+
+.container {
+  width: 100%;
+  padding: 1em;
+  background: #dcf8c6;
+}  
+</style>
+<div class="flexbox-container">
+    <div class="flexbox-item fixed">
+        <form>
+            <div class="container">
+                <button type="submit" class="search">ABRIR WHATSAP</button>
+                <br><br><br>
+                <label for="mobNumInput">819</label>
+                <input type="tel" pattern="[0-9]+" minlength="8" maxlength="11" required id="mobNumInput"
+                       placeholeder="Enter mobile number"/>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+var elem = document.getElementById("mobNumInput");
+input.addEventListener("invalid", function(evt) {
+  var elem = evt.srcElement;
+  elem.nextSibling.innerText = elem.validationMessage;
+});  
+</script>
       <script src="js/vendor/modernizr-3.11.2.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
