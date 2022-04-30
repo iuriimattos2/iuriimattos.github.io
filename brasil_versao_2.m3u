@@ -1,6 +1,24 @@
 #EXTM3U url-tvg=""
 #EXTM3U
 
+#EXTINF:0 tvg-name="Aninal Channel HD" tvg-language="Russian" tvg-country="RU" tvg-id="Animal Channel HD" tvg-logo="http://logok.org/wp-content/uploads/2014/04/Animal-Planet-logo.png" group-title="Documentary",Aninal Channel HD (Documentary) (RU) (Russian)
+http://origin2.tomsk.ertelecom.ru/content/private/s147213/d3720264/r183872sd2500000/ce6e05b37bf6b2f9166459f0972240fb2da9b7d6/playlist.m3u8
+#EXTINF:0 tvg-name="Animal Planet Live" tvg-language="English" tvg-country="US" tvg-id="Animal Planet Live" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOZ8YNxtkqlITEqa1sJJ2HzWWJo3cbIJf2WsTV73Z3Hl3xJaU7u8VVA" group-title="Documentary",Animal Planet Live (Documentary) (US) (English)
+http://iphone-streaming.ustream.tv/uhls/17448463/streams/live/iphone/playlist.m3u8
+#EXTINF:0 tvg-name="Animal Planet" tvg-language="English" tvg-country="US" tvg-id="Animal Planet" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Animal_Planet_Canada_Logo.PNG/200px-Animal_Planet_Canada_Logo.PNG" group-title="Documentary",Animal Planet (Documentary) (US) (English)
+http://167.114.102.27/live/KZEQnRHTJ5Lc0eN3fsQcQw/1455736335/52d1df7fff7b1ba3ac317b98ef2fdb80.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
+#EXTINF:0 tvg-name="Arirang TV World" tvg-language="English" tvg-country="KR" tvg-id="Arirang TV World" tvg-logo="http://www.vasiantv.com/wp-content/uploads/2012/12/arirang-300x200.jpg" group-title="Documentary",Arirang TV World (Documentary) (KR) (English)
+
+#EXTINF:0 tvg-name="ESPN" tvg-language="English" tvg-country="US" tvg-id="ESPN" tvg-logo="http://pacificrecords.com/Pacific_Records/prwp/wp-content/uploads/2015/06/espn-logo.jpg" group-title="Top10",ESPN (Top10) (US) (English)
+http://167.114.102.27/live/BXd9f9a51RCcTTs3GK2tIg/1455736215/7b0ef842a6a1233a8a86a8533063a1a1.m3u8|User-Agent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F47.0.2526.106%20Safari%2F537.36
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-country="US" tvg-language="English" tvg-logo="https://i.imgur.com/GhhN8mW.png",ESPN (360p)
+http://stream.tvtap.live:8081/live/espnusahd.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-country="US" tvg-language="English" tvg-logo="https://i.imgur.com/GhhN8mW.png",ESPN (720p)
+https://content.uplynk.com/channel/d0695f6fa2f143eb95c7a41d96d581c4.m3u8
+#EXTINF:-1 tvg-id="ESPN2.us" tvg-name="ESPN 2" tvg-country="US" tvg-language="English" tvg-logo="https://i.imgur.com/CTgGetu.png",ESPN 2 (360p)
+http://stream.tvtap.live:8081/live/espn2hd.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="ESPN2.us" tvg-name="ESPN 2" tvg-country="US" tvg-language="English" tvg-logo="https://i.imgur.com/CTgGetu.png",ESPN 2 (720p)
+http://stream2.grandma.fit/espn2.m3u8
 #EXTINF:-1 group-title="Esportes",PT: SPORT TV 2 HD(1)
 http://premium-iptv.link:6969/live/ace/WFCQBW46kP/159.ts
 #EXTINF:-1 group-title="Esportes",PT:SPORT TV 1 HD
